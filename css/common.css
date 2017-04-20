@@ -1,0 +1,109 @@
+body{
+	position: relative;
+	min-height: 100vh;
+	padding-bottom: 60px;
+	
+}
+/* /////////////// main header format //////////////////*/
+.navbar {
+    height: 60px;
+    background-color: green;
+}
+/* /////////////// logo and name div //////////////////*/
+#brand-details {
+    width: 100%;
+    background-color: pink;
+    height:60px;
+}
+#brand-details img{
+    height: 60px;
+    float: left;
+}
+.navbar-brand {
+    padding-bottom: 50px;
+    
+}
+#navbar-logo img{
+	width: auto;
+	height: auto;
+}
+#navbar-logo h1{
+	float: left;
+}
+#searchbox { 
+    height: auto;
+    
+    background-color: yellow;
+}
+/* ////////////// Login details buttons //////////////////*/
+#login-dp{
+    min-width: 300px;
+    padding: 15px 5px 15px 5px;
+    overflow: hidden;
+    background-color: white;
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+}
+
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+#login-dp .vert-separator{
+    background-color: black;
+    height: 200px;
+    width:1px;
+}
+#login-div{
+    background-color: orange;
+    width: 100%;
+    margin-top: 3px;
+}
+@media only screen and (max-width:950px){
+    #login-dp .vert-separator{
+        background-color: black;
+        width: 75%;
+        height: 1px;
+        margin: 12px 0px 12px 15%;
+    }
+    
+}
+
+/* ////////////////////Social buttons ///////////////////*/
+
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+    margin-top: 5%;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    margin-top: 1%;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+#login-dp .social-buttons{
+    width: 100%;
+    margin-top: 2%;
+}
+#login-dp .social-buttons a{
+    width: 90%;    
+}
+
+#check {
+    background-color: purple;
+    width: 100%;
+
+}

@@ -1,0 +1,158 @@
+
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 450px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+    height: auto;
+    padding: 15px;
+    }
+    .row.content {height:auto;} 
+}
+
+.navbar-toggle.navbar-left {
+  float: left;
+  margin-left: 10px;
+}
+
+
+
+
+#login-det ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#login-det li{
+    float:left;
+}
+#login-det li a{
+    display: inline;
+    padding: 8px;
+    
+}
+
+/* ////////////// Login details buttons //////////////////*/
+#login-dp{
+    min-width: 300px;
+    padding: 15px 5px 15px 5px;
+    overflow: hidden;
+    border:1px solid #ddd;
+    margin-right: 1%;
+}
+
+#login-dp .help-block{
+    font-size:12px;  
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+}
+
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+
+#login-div{
+    width: 100%;
+    margin-top: 3px;
+}
+@media only screen and (max-width:950px){
+    #login-dp .vert-separator{
+        background-color: black;
+        width: 75%;
+        height: 1px;
+        margin: 12px 0px 12px 15%;
+    }
+    
+}
+
+/* ////////////////////Social buttons ///////////////////*/
+
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+    margin-top: 5%;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    margin-top: 1%;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+#login-dp .social-buttons{
+    width: 100%;
+    margin-top: 2%;
+}
+#login-dp .social-buttons a{
+    width: 90%;    
+}
+
+/* ////////////////////search bar ///////////////////*/
+#searchbox{
+    margin-top:10px;
+    margin-bottom:10px;
+    width:250px;
+    display: none;
+    position: relative;
+}
+.stylish-input-group .input-group-addon{
+    background: white; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+/* //////////////////// footer ///////////////////*/
+.footer {
+	position: absolute;
+	bottom: 0;
+	
+}
+
+.fixed {
+    position:fixed;
+    top:0;
+    width: 100%;
+}
+/*/////////////////////// modal ////////////////*/
+#regContainer{
+    border-right: 1px dotted #C2C2C2;
+    padding-right: 30px;
+}
