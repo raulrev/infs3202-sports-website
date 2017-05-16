@@ -1,18 +1,8 @@
 <?php
 $servername = "localhost";
-$database="sports_user_data";
-$password = " ";
+$database="sports_data";
+$username = "pma";
+$password = "";
 
 // Create connection
-$conn = new mysqli($servername, $database, $password);
-echo $password;
-if ($conn->connect_error)
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  
-  }
-else
-{
-  echo "Successfully connected to your database…";
-}
-?>
+$mysqli = new mysqli($servername, $username, $password, $database) or die($mysqli->error);

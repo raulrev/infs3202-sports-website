@@ -1,4 +1,3 @@
-
 <div class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="row">
@@ -18,19 +17,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>                        
                 </button>
-                <a class="navbar-brand" href="#"><span class="fa fa-home fa-1x"></span></a>
+                <a class="navbar-brand" href="sport.php"><span class="fa fa-home fa-1x"></span></a>
             </div>
             <!-- subcategories for the navigation bar -->
             <div class="col-md-7 col-xs-8">
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Top News</a></li>
-                        <li><a href="#">Select League</a></li>
+                        <li class="active"><a href="sport.php">Top News</a></li>
+                        <li><a href="sportsCategories.php">Categories</a></li>
                         <li><a href="#">Matches</a></li>
-                        <li><a href="#">Sports</a></li>
+                        <li><a href="#error" data-toggle="modal" data-target="#errorModal">Sports</a></li>
                         <li><a href="#">Bookmarks</a></li>
                     </ul>
                 </div>
+
             </div>
             <!-- Search bar setup -->
             <div class="col-md-4 col-xs-3">
@@ -58,18 +58,18 @@
                                     <div class="col-md-12">
                                         <medium> Existing users:</medium>
                                         <!-- Enter user details (form) -->
-                                        <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                        <form class="form" role="form" method="POST" accept-charset="UTF-8" id="login-nav">
                                             <div class="form-group">
-                                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                <label class="sr-only" for="inputEmail">Email address</label>
+                                                <input type="email" class="form-control" name="email" placeholder="Email address" required>
                                             </div>
                                             <div class="form-group">
-                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                <label class="sr-only" for="inputPassword">Password</label>
+                                                <input type="password" class="form-control" name="password" placeholder="Password" required>
                                                 <div class="help-block text-right"><a href="">Forget the password ?</a></div>
                                             </div>
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                                <button type="submit" name="login" class="btn btn-primary btn-block">Log In</button>
                                             </div>
                                             <div class="checkbox">
                                                 <label>

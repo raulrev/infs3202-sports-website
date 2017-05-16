@@ -1,37 +1,42 @@
 <?php
 include "databaseConnect.php";
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-//Check to see if the user is already logged in. If so, redirect them to the index page.
-if (isset($_SESSION['username']) && $_SESSION['authenticated'] == true) {
-  header("Location: sport.php");
-}
-
-//Make sure user has entered all details - sign user up into DB and redirect them to sports.php
+/* Registration process, inserts user info into the database 
+   and sends account confirmation email message
+ */
 if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['country'])) {
-  $username = mysqli_real_escape_string($conn, $_POST['username']);
-  $email = mysqli_real_escape_string($conn, $_POST['email']);
-  $country = mysqli_real_escape_string($conn, $_POST['country']);
-  $password = md5($_POST['password']);
-  
-  $query = "INSERT INTO webusers VALUES('$username','$email','$country','$password')";
+// Set session variables to be used on profile.php page
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['country'] = $_POST['country'];
 
-  $result = mysqli_query($conn, $query);
+    // Escape all $_POST variables to protect against SQL injections
+    $username = $mysqli->escape_string($_POST['username']);
+    $country = $mysqli->escape_string($_POST['country']);
+    $email = $mysqli->escape_string($_POST['email']);
+    $password = $mysqli->escape_string(password_hash($_POST['password'], PASSWORD_BCRYPT));
+    $hash = $mysqli->escape_string( md5( rand(0,1000) ) );
 
-if ($conn->query($query) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $query . "<br>" . $conn->error;
+    // Check existing email
+    $result = $mysqli->query("SELECT * FROM users WHERE email='$email'") or die($mysqli->error);
+
+    // If email is found in db return error message
+    if ( $result->num_rows > 0 ) {
+        
+        $_SESSION['message'] = 'User with this email already exists!';    
+        echo "dont add";
+        // display error msg --> header("location: error.php");
+    }
+    // if email is not found in db continue
+    else { 
+    // add user to db and enable account
+        $sql = "INSERT INTO users (username, country, email, password, hash, active)" . "VALUES ('$username','$country','$email','$password', '$hash', '1')";
+        
+        
+    }
 }
-
-    echo "username: " .$username ;
-    echo "result: " .$result;
-    echo "query: " .$query;
-}
-
 
  ?>
+
 
   <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -75,7 +80,7 @@ if ($conn->query($query) === TRUE) {
                                     </div>
                                     
                                         <div class="col-sm-12">
-                                            <button type="submit" class="btn btn-primary btn-sm">Continue</button>
+                                            <button type="submit" class="btn btn-primary btn-sm" name="register">Register</button>
                                             <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
                                         </div>
                                     

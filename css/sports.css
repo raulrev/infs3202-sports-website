@@ -36,9 +36,6 @@ footer {
   margin-left: 10px;
 }
 
-
-
-
 #login-det ul{
     list-style-type: none;
     margin: 0;
@@ -50,8 +47,7 @@ footer {
 }
 #login-det li a{
     display: inline;
-    padding: 8px;
-    
+    padding: 8px;   
 }
 
 /* ////////////// Login details buttons //////////////////*/
@@ -155,4 +151,59 @@ footer {
 #regContainer{
     border-right: 1px dotted #C2C2C2;
     padding-right: 30px;
+    
 }
+
+#news-hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, #f1f1f1, #f1f1f1, #f1f1f1);
+    margin-bottom: 3pt;
+    margin-top: 0;
+}
+
+#top-group-container{
+     background-color:white;  
+}
+
+#news-container {
+    min-width: 350px; 
+    height:175px;
+    margin-bottom: 2px;
+    margin-left: 0;
+}
+/* format images in news feed containers */
+#news-container img{
+    max-width:200px; 
+    max-height:120px; 
+    float: left; 
+    margin-right: 10px;
+}
+#inner-news-cont{  
+    overflow-x:hidden;
+    overflow-y: scroll;
+    padding:0;
+    height:360px;
+}
+
+.arrange li{
+    display:inline;
+}
+
+/*button format*/
+.btn-sq-lg {
+  width: 150px !important;
+  height: 150px !important;
+  
+}
+
+.btn-sq {
+  width: 100px !important;
+  height: 100px !important;
+  font-size: 10px;
+  
+}
+
+
+
+

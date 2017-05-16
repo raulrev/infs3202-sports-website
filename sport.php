@@ -22,6 +22,7 @@ session_start();
 
 <body>
     <?php include 'include/header.php';?>	
+    <?php include 'sports_data.php';?>
 
     <div id="testcontent" class="container-fluid text-center">
         <div class="row content">
@@ -30,21 +31,39 @@ session_start();
                 <p><a href="#">Link</a></p>
                 <p><a href="#">Link</a></p>
             </div>
-            <div class="col-sm-8 text-left">
-                <h1>Welcome</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eamagna
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eamagna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eamagna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eamagna
-                    consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                    anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.</p>
-                <hr>
-                <h3>Test</h3>
-                <p>Lorem ipsum...</p>
+            <!-- center container col -->
+            <div id= "TopNews" class="col-sm-8 text-left">
+                <!-- news feed container -->
+                <div class="row" id="top-group-container" style=" margin:1%; border: solid #f1f1f1;">
+                    <h4>News Feed</h4>
+                    <hr id="news-hr">
+                    <div class="container-fluid col-md-12" id="inner-news-cont">
+                            <?php echo bccTopNews() ?>
+                    </div>
+
+                </div>
+                <!-- Football container -->
+                 <div class="row" id="top-group-container" style=" margin:1%; border: solid #f1f1f1;">
+                    <h4>Footbal Italy</h4>
+                    <hr id="news-hr">
+                    <div class="container-fluid col-md-12" id="inner-news-cont">
+                            <?php echo footballSources() ?>
+                    </div>
+
+                </div>
+                <!-- NFL container -->
+                <div class="row" id="top-group-container" style=" margin:1%; border: solid #f1f1f1;">
+                    <h4>NFL</h4>
+                    <hr id="news-hr">
+                    <div class="container-fluid col-md-12" id="inner-news-cont">
+                            <?php echo nflSources() ?>
+                    </div>
+
+                </div>
+                
             </div>
+
+
             <div class="col-sm-2 sidenav">
                 <div class="well">
                     <p>ADS</p>
@@ -56,7 +75,12 @@ session_start();
         </div>
     </div>
     <?php include 'signUp.php';?>
-
+    <?php include 'error.php';?> 
+    <?php include 'logout.php';?>
+    
+    <script async defer
+        src="https://newsapi.org/v1/articles?source=the-next-web&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f">
+    </script>
     <?php include 'include/footer.php';?>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
