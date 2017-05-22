@@ -18,6 +18,7 @@ session_start();
     <!-- js methods -->
     <script type='text/javascript' src="js/jqueryLibrary.js"></script>
     <script type="text/javascript" src="js/searchbar.js"></script>
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
 </head>
 
 <body>
