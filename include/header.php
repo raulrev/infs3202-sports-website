@@ -52,44 +52,8 @@
                     <!-- Login details -->
                     <li class="dropdown">
                         <div id="login-div">
-                            <li class="dropdown-toggle" data-toggle="dropdown"> <a href="#"><i class="fa fa-user-circle fa-1x"></i>Login</a></li>
-                            <ul id="login-dp" class="dropdown-menu">
-                                <li>
-                                    <div class="col-md-12">
-                                        <medium> Existing users:</medium>
-                                        <!-- Enter user details (form) -->
-                                        <form class="form" role="form" method="POST" accept-charset="UTF-8" id="login-nav">
-                                            <div class="form-group">
-                                                <label class="sr-only" for="inputEmail">Email address</label>
-                                                <input type="email" class="form-control" name="email" placeholder="Email address" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="sr-only" for="inputPassword">Password</label>
-                                                <input type="password" class="form-control" name="password" placeholder="Password" required>
-                                                <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-                                            </div>
-                                            <div class="form-group">
-                                                <button type="submit" name="login" class="btn btn-primary btn-block">Log In</button>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                            <input type="checkbox"> keep me logged-in
-                                        </label>
-                                            </div>
-                                        </form>
-                                        <div class="bottom text-center">
-                                            New here ? <a href="#signup" data-toggle="modal" data-target="#myModal"><b>Join Us</b></a>
-
-                                        </div>
-                                    </div>
-                                    <!-- social media buttons -->
-                                    <div class="social-buttons text-center">
-                                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Login with Facebook</a>
-                                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Login with Twitter</a>
-                                    </div>
-
-                                </li>
-                            </ul>
+                            <li class="dropdown-toggle"> <a href="signUpForm.php"><i class="fa fa-user-circle fa-1x"></i>Login</a></li>
+                            
                         </div>
                     </li>
                 </ul>

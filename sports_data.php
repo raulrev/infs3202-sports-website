@@ -12,7 +12,7 @@
               if ($i <= 3){
                   if ($i==0) {
                       echo '<div class="item active">
-                      <ul class="thumbnails" >';
+                      <ul class="thumbnails" style="list-style-type: none;">';
                       createCarouselElement($sites);
                   }
                   else if ($i == 3){
@@ -26,7 +26,7 @@
               else if ($i >= 4 and $i <= 7){
                   if($i == 4){
                       echo '<div class="item"> 
-                              <ul class="thumbnails">';
+                              <ul class="thumbnails" style="list-style-type: none;">';
                       createCarouselElement($sites);
                   }
                   else if ($i == 7){
@@ -42,7 +42,7 @@
               else if ($i >= 8 and $i <= 11){
                   if($i==8){
                       echo '<div class="item">
-                           <ul class="thumbnails">';
+                           <ul class="thumbnails" style="list-style-type: none;">';;
                             createCarouselElement($sites);
                   }
                   else if ($i == 10){
@@ -114,7 +114,7 @@
               if ($i <= 3){
                   if ($i==0) {
                       echo '<div class="item active">
-                      <ul class="thumbnails" >';
+                      <ul class="thumbnails" style="list-style-type: none;">';
                       createCarouselElement($sites);
                   }
                   else if ($i == 3){
@@ -128,7 +128,7 @@
               else if ($i >= 4 and $i <= 7){
                   if($i == 4){
                       echo '<div class="item"> 
-                              <ul class="thumbnails">';
+                              <ul class="thumbnails" style="list-style-type: none;">';
                       createCarouselElement($sites);
                   }
                   else if ($i == 7){
@@ -144,7 +144,7 @@
               else if ($i >= 8 and $i <= 11){
                   if($i==8){
                       echo '<div class="item">
-                           <ul class="thumbnails">';
+                           <ul class="thumbnails" style="list-style-type: none;">';
                             createCarouselElement($sites);
                   }
                   else if ($i == 10){
@@ -303,7 +303,7 @@
               if ($i <= 3){
                   if ($i==0) {
                       echo '<div class="item active">
-                      <ul class="thumbnails" >';
+                      <ul class="thumbnails" style="list-style-type: none;">';
                       createCarouselElement($sites);
                   }
                   else if ($i == 3){
@@ -317,7 +317,7 @@
               else if ($i >= 4 and $i <= 7){
                   if($i == 4){
                       echo '<div class="item"> 
-                              <ul class="thumbnails">';
+                              <ul class="thumbnails" style="list-style-type: none;">';
                       createCarouselElement($sites);
                   }
                   else if ($i == 7){
@@ -333,7 +333,7 @@
               else if ($i >= 8 and $i <= 11){
                   if($i==8){
                       echo '<div class="item">
-                           <ul class="thumbnails">';
+                           <ul class="thumbnails" style="list-style-type: none;">';
                             createCarouselElement($sites);
                   }
                   else if ($i == 10){

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<?php
+<?php 
+/* Main page with two forms: sign up and log in */
 session_start();
- ?>
-
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -13,6 +13,7 @@ session_start();
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/sports.css">
     <link rel="stylesheet" type="text/css" href="css/caru.css">
@@ -24,7 +25,6 @@ session_start();
 <body>
     <?php include 'include/header.php';?>	
     <?php include 'sports_data.php';?>
-
     <div id="testcontent" class="container-fluid text-center">
         <div class="row content">
             <!-- Sidenav -->
@@ -109,8 +109,8 @@ session_start();
         </div>
     </div>
     <?php include 'signUp.php';?>
-    <?php include 'error.php';?> 
-    <?php include 'logout.php';?>
+    
+    
     
     <script async defer
         src="https://newsapi.org/v1/articles?source=the-next-web&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f">
