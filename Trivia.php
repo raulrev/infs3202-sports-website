@@ -2,7 +2,6 @@
 <?php
 session_start();
  ?>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -13,36 +12,36 @@ session_start();
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	</style>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/trivia.css">
+    <link rel="stylesheet" type="text/css" href="css/sports.css">
     <!-- js methods -->
     <script type='text/javascript' src="js/jqueryLibrary.js"></script>
     <script type="text/javascript" src="js/searchbar.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
+	<script type="text/javascript" src="js/isOneChecked.js"></script>
 </head>
 
 <body>
     <?php include 'include/header.php';?>	
     <?php include 'sports_data.php';?>
-	<div id="testcontent" class="container-fluid text-center">
+	<div id=sportspics class = "container-fluid text-right">
+	<div id="testcontent" class="container-fluid text-left">
         <div class="row content">
-            <div class="col-sm-2 sidenav">
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
-            </div>
-
-            <div id= "SportsSelection" class="col-sm-8"> 
-				<h2>This Weeks Quiz!</h2>
+			<?php include 'sideNavigationMenu.php'; ?>
+            <div id= "quizData" class="col-sm-8">
+				<h2 style = "font-size: 25px">This Weeks Quiz! Genre: Football</h2>
 					<form action="trivia_results.php" method="post" id="quiz">
-					<li>
-					<h4>Question 1: Who was the goalkeeper for Arsenal during their 2003/04 undefeated season?</h4>
+					<li required>
+					<h4 style = "font-size: 15px; font-weight: bold;">Question 1: Who was the goalkeeper for Arsenal during their 2003/04 undefeated season?</h4>
 
 					<div>
 
 					<input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
 
 					<label for="question-1-answers-A">A) Jens Lehmann</label>
+					<img src="https://static.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg" height="250" width="450" style = "float: right; padding-right:40px;">
 
 					</div>
 
@@ -69,7 +68,7 @@ session_start();
 					<label for="question-1-answers-D">D) Brad Friedel</label>
 
 					</div>
-					<h4>Question 2: Who scored the only goal when Portugal beat France to win Euro 2016?</h4>
+					<h4 style = "font-size: 15px; font-weight: bold;">Question 2: Who scored the only goal when Portugal beat France to win Euro 2016?</h4>
 
 					<div>
 
@@ -102,7 +101,7 @@ session_start();
 					<label for="question-2-answers-D">D) None of the above</label>
 
 					</div>
-					<h4>Question 3: Which player scored the first hat-trick of the 2016-17 Premier League season?</h4>
+					<h4 style = "font-size: 15px; font-weight: bold;">Question 3: Which player scored the first hat-trick of the 2016-17 Premier League season?</h4>
 
 					<div>
 
@@ -117,6 +116,8 @@ session_start();
 					<input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
 
 					<label for="question-3-answers-B">B) Sadio Mane</label>
+					
+					<img src="https://static.pexels.com/photos/2174/man-person-grass-sport.jpg" height="300" width="302" style = "float: right; padding-right:40px;">
 
 					</div>
 
@@ -135,7 +136,7 @@ session_start();
 					<label for="question-3-answers-D">D) None of the above</label>
 
 					</div>
-					<h4>Question 4: As of December 2016, Danielle Carter is a English footballer that plays for which Women's Premier League team?</h4>
+					<h4 style = "font-size: 15px; font-weight: bold;">Question 4: As of December 2016, Danielle Carter is a English footballer that plays for which Women's Premier League team?</h4>
 
 					<div>
 
@@ -168,7 +169,7 @@ session_start();
 					<label for="question-4-answers-D">D) None of the above</label>
 
 					</div>
-					<h4>Question 5: How many goals did Peter Schmeichel score in his professional career?</h4>
+					<h4 style = "font-size: 15px; font-weight: bold;">Question 5: How many goals did Peter Schmeichel score in his professional career?</h4>
 
 					<div>
 
@@ -199,10 +200,12 @@ session_start();
 					<input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" />
 
 					<label for="question-5-answers-D">D) None of the above</label>
+					
+					<img src="https://static.pexels.com/photos/35781/sport-football-football-boots-ball.jpg" height="275" width="450" style = "float: right; padding-right:40px;">
 
 					</div>
 					
-					<h4>Question 6: How many competitive goals did Cristiano Ronaldo score for Manchester United?</h4>
+					<h4 style = "font-size: 15px; font-weight: bold;">Question 6: How many competitive goals did Cristiano Ronaldo score for Manchester United?</h4>
 					<div>
 
 					<input type="radio" name="question-6-answers" id="question-6-answers-A" value="A" />
@@ -235,7 +238,7 @@ session_start();
 
 					</div>
 					
-					<h4>Question 7: Which French attacker was named 'Player of the Tournament' at Euro 2016?</h4>
+					<h4 style = "font-size: 15px; font-weight: bold;">Question 7: Which French attacker was named 'Player of the Tournament' at Euro 2016?</h4>
 					<div>
 
 					<input type="radio" name="question-7-answers" id="question-7-answers-A" value="A" />
@@ -266,14 +269,17 @@ session_start();
 
 					<label for="question-7-answers-D">D) None of the above</label>
 
+
 					</div>
 					
-					<h4>Question 8: Lionel Messi holds the record for most goals in a calendar year but how many did he score?</h4>
+					<h4 style = "font-size: 15px; font-weight: bold;">Question 8: Lionel Messi holds the record for most goals in a calendar year but how many did he score?</h4>
 					<div>
 
 					<input type="radio" name="question-8-answers" id="question-8-answers-A" value="A" />
 
 					<label for="question-8-answers-A">A) 81</label>
+
+					<img src="http://i1.mirror.co.uk/incoming/article8792354.ece/ALTERNATES/s810/Arsenal-Number-9s-MAIN.jpg" height="275" width="450" style = "float: right; padding-right:40px;">
 
 					</div>
 
@@ -301,7 +307,7 @@ session_start();
 
 					</div>
 					
-					<h4>Question 9: Thierry Henry made his professional debut with which club?</h4>
+					<h4 style = "font-size: 15px; font-weight: bold;">Question 9: Thierry Henry made his professional debut with which club?</h4>
 					<div>
 
 					<input type="radio" name="question-9-answers" id="question-9-answers-A" value="A" />
@@ -334,7 +340,7 @@ session_start();
 
 					</div>
 					
-					<h4>Question 10: Tony Adams captained an English title winning side in how many decades?</h4>
+					<h4 style = "font-size: 15px; font-weight: bold;">2Question 10: Tony Adams captained an English title winning side in how many decades?</h4>
 					<div>
 
 					<input type="radio" name="question-10-answers" id="question-10-answers-A" value="A" />
@@ -368,7 +374,7 @@ session_start();
 					</div>
 					</li>
 
-					<input type="submit" value="Submit Quiz" />
+					<input id = "submit_button" type="submit" value="Submit Quiz" class="btn btn-success"/>
 				</form>
 			</div>
 			<div class="col-sm-2 sidenav">
@@ -382,6 +388,7 @@ session_start();
 
         </div>
     </div>
+</body>
 
     <?php include 'signUp.php';?>
     <?php include 'error.php';?> 
