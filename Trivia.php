@@ -201,6 +201,171 @@ session_start();
 					<label for="question-5-answers-D">D) None of the above</label>
 
 					</div>
+					
+					<h4>Question 6: How many competitive goals did Cristiano Ronaldo score for Manchester United?</h4>
+					<div>
+
+					<input type="radio" name="question-6-answers" id="question-6-answers-A" value="A" />
+
+					<label for="question-6-answers-A">A) 98</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-6-answers" id="question-6-answers-B" value="B" />
+
+					<label for="question-6-answers-B">B) 104</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-6-answers" id="question-6-answers-C" value="C" />
+
+					<label for="question-6-answers-C">C) 118</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-6-answers" id="question-6-answers-D" value="D" />
+
+					<label for="question-6-answers-D">D) None of the above</label>
+
+					</div>
+					
+					<h4>Question 7: Which French attacker was named 'Player of the Tournament' at Euro 2016?</h4>
+					<div>
+
+					<input type="radio" name="question-7-answers" id="question-7-answers-A" value="A" />
+
+					<label for="question-7-answers-A">A) Hugo Lloris</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-7-answers" id="question-7-answers-B" value="B" />
+
+					<label for="question-7-answers-B">B) Paul Pogba</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-7-answers" id="question-7-answers-C" value="C" />
+
+					<label for="question-7-answers-C">C) Antoine Griezmann</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-7-answers" id="question-7-answers-D" value="D" />
+
+					<label for="question-7-answers-D">D) None of the above</label>
+
+					</div>
+					
+					<h4>Question 8: Lionel Messi holds the record for most goals in a calendar year but how many did he score?</h4>
+					<div>
+
+					<input type="radio" name="question-8-answers" id="question-8-answers-A" value="A" />
+
+					<label for="question-8-answers-A">A) 81</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-8-answers" id="question-8-answers-B" value="B" />
+
+					<label for="question-8-answers-B">B) 91</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-8-answers" id="question-8-answers-C" value="C" />
+
+					<label for="question-8-answers-C">C) 101</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-8-answers" id="question-8-answers-D" value="D" />
+
+					<label for="question-8-answers-D">D) None of the above</label>
+
+					</div>
+					
+					<h4>Question 9: Thierry Henry made his professional debut with which club?</h4>
+					<div>
+
+					<input type="radio" name="question-9-answers" id="question-9-answers-A" value="A" />
+
+					<label for="question-9-answers-A">A) Juventus</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-9-answers" id="question-9-answers-B" value="B" />
+
+					<label for="question-9-answers-B">B) Chelsea</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-9-answers" id="question-9-answers-C" value="C" />
+
+					<label for="question-9-answers-C">C) Arsenal</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-9-answers" id="question-9-answers-D" value="D" />
+
+					<label for="question-9-answers-D">D) None of the above</label>
+
+					</div>
+					
+					<h4>Question 10: Tony Adams captained an English title winning side in how many decades?</h4>
+					<div>
+
+					<input type="radio" name="question-10-answers" id="question-10-answers-A" value="A" />
+
+					<label for="question-10-answers-A">A) 1</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-10-answers" id="question-10-answers-B" value="B" />
+
+					<label for="question-10-answers-B">B) 2</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-10-answers" id="question-10-answers-C" value="C" />
+
+					<label for="question-10-answers-C">C) 3</label>
+
+					</div>
+
+					<div>
+
+					<input type="radio" name="question-10-answers" id="question-10-answers-D" value="D" />
+
+					<label for="question-10-answers-D">D) 4</label>
+
+					</div>
 					</li>
 
 					<input type="submit" value="Submit Quiz" />
