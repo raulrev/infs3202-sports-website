@@ -41,7 +41,7 @@ session_start();
 					<input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
 
 					<label for="question-1-answers-A">A) Jens Lehmann</label>
-					<img src="https://static.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg" height="250" width="450" style = "float: right; padding-right:40px;">
+					<img class = "trivImages" src="https://static.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg" height="250" width="450" style = "float: right; padding-right:40px;">
 
 					</div>
 
@@ -117,7 +117,7 @@ session_start();
 
 					<label for="question-3-answers-B">B) Sadio Mane</label>
 					
-					<img src="https://static.pexels.com/photos/2174/man-person-grass-sport.jpg" height="300" width="302" style = "float: right; padding-right:40px;">
+					<img class = "trivImages" src="https://static.pexels.com/photos/2174/man-person-grass-sport.jpg" height="300" width="302" style = "float: right; padding-right:40px;">
 
 					</div>
 
@@ -201,7 +201,7 @@ session_start();
 
 					<label for="question-5-answers-D">D) None of the above</label>
 					
-					<img src="https://static.pexels.com/photos/35781/sport-football-football-boots-ball.jpg" height="275" width="450" style = "float: right; padding-right:40px;">
+					<img class = "trivImages" src="https://static.pexels.com/photos/35781/sport-football-football-boots-ball.jpg" height="275" width="450" style = "float: right; padding-right:40px;">
 
 					</div>
 					
@@ -279,7 +279,7 @@ session_start();
 
 					<label for="question-8-answers-A">A) 81</label>
 
-					<img src="http://i1.mirror.co.uk/incoming/article8792354.ece/ALTERNATES/s810/Arsenal-Number-9s-MAIN.jpg" height="275" width="450" style = "float: right; padding-right:40px;">
+					<img class = "trivImages" src="http://i1.mirror.co.uk/incoming/article8792354.ece/ALTERNATES/s810/Arsenal-Number-9s-MAIN.jpg" height="275" width="450" style = "float: right; padding-right:40px;">
 
 					</div>
 
@@ -378,7 +378,7 @@ session_start();
 				</form>
 			</div>
 			<div class="col-sm-2 sidenav">
-                <div class="well">
+                <div class="well" style = "padding-top: 10px";>
                     <p>ADS</p>
                 </div>
                 <div class="well">
@@ -388,8 +388,21 @@ session_start();
 
         </div>
     </div>
+	<?php include 'signUp.php';?>
+    
+    
+    
+    <script async defer
+        src="https://newsapi.org/v1/articles?source=the-next-web&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f">
+    </script>
+    <?php include 'include/footer.php';?>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Change background colours-->
+  
+
 </body>
 
-    <?php include 'signUp.php';?>
-    <?php include 'error.php';?> 
-    <?php include 'logout.php';?>
+</html>

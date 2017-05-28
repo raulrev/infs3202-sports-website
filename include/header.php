@@ -1,9 +1,9 @@
-<div class="navbar navbar-inverse">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="row">
             <!-- Title and logo -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="#"><span class="fa fa-qq fa-1x"></span>   Web Name</a>
+                <a class="navbar-brand" href="#"><span class="fa fa-qq fa-1x"></span>   Sports World</a>
             </div>
         </div>
     </div>
@@ -28,6 +28,7 @@
                         <li><a href="#">Matches</a></li>
                         <li><a href="#error" data-toggle="modal" data-target="#errorModal">Sports</a></li>
                         <li><a href="bookmarks.php">Bookmarks</a></li>
+						<li><a href="Trivia.php">Trivia</a></li>
                     </ul>
                 </div>
 
