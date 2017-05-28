@@ -20,20 +20,20 @@
                 <a class="navbar-brand" href="sport.php"><span class="fa fa-home fa-1x"></span></a>
             </div>
             <!-- subcategories for the navigation bar -->
-            <div class="col-md-7 col-xs-8">
+            <div class="col-md-7 col-xs-12">
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="sport.php">Top News</a></li>
                         <li><a href="sportsCategories.php">Categories</a></li>
                         <li><a href="#">Matches</a></li>
                         <li><a href="#error" data-toggle="modal" data-target="#errorModal">Sports</a></li>
-                        <li><a href="#">Bookmarks</a></li>
+                        <li><a href="bookmarks.php">Bookmarks</a></li>
                     </ul>
                 </div>
 
             </div>
             <!-- Search bar setup -->
-            <div class="col-md-4 col-xs-3">
+            <div class="col-md-4 col-xs-12">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#" id="searchInput"><span class="fa fa-search fa-1x"></span> Search</a></li>
 
