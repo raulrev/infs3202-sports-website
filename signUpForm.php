@@ -13,10 +13,9 @@ session_start();
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
-	
-	<link rel="stylesheet" href="css/logForm.css">
     <link rel="stylesheet" href="css/sports.css">
 
 </head>
@@ -32,6 +31,8 @@ session_start();
     }
 ?>
 <body>      
+    <div id="testcontent" class="container-fluid text-center">
+        <div class="row content">
     <div class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="row">
@@ -42,14 +43,16 @@ session_start();
             </div>
         </div>
     </div>
-
-    <div class="form">    
+    
+      <?php include 'sideNavigationMenu.php'; ?>
+            <!-- center container col -->
+    <div class="forma col-md-8" style="background-color:#f1f1f1;">    
         <ul class="tab-group">
             <li class="tab active"><a href="#login">Log In</a></li>
             <li class="tab"><a href="#signup">Sign Up</a></li>
         </ul>
         
-        <div class="tab-content">
+        <div class="tab-content ">
 
             <div id="login">   
             <h1>Welcome Back!</h1>
@@ -122,6 +125,8 @@ session_start();
         </div><!-- tab-content -->
         
     </div> <!-- /form -->
+    </div>
+    </div>
     <?php include 'include/footer.php';?>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/signlog.js"></script>
