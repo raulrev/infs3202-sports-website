@@ -1,32 +1,27 @@
 <?php
 /* Log out process, unsets and destroys session variables */
+session_start();
 session_unset();
 session_destroy(); 
-
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/logForm.css">
+  <title>Error</title>
+</head>
 
-<!-- Logout Status */-->
-<!-- Modal -->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                ×</button>
-                <h4 class="modal-title" id="myModalLabel"></h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div id="regContainer" class="col-md-12" >
-                        <h1>Logout Status</h1>
-                            
-                        <p><?= 'You have been logged out!'; ?></p>
-                        
-                        <a href="sport.php"><button class="button button-block"/>Home</button></a>
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
+<body>
+
+    <div class="forma" style="background-color: #222;">
+          <h1>Thanks for using our website</h1>
+              
+          <p><?= 'You have been successfully logged out!'; ?></p>
+          
+          <a href="signUpForm.php"><button class="button-block" style="background-color:#3c643c; font-size: 2rem;
+  font-weight: 500; text-transform: uppercase; color: white; border:none;">Return to the main page</button></a>
+
     </div>
-</div>
+</body>
+</html>

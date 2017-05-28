@@ -1,5 +1,3 @@
-<!-- Displays all error messages */-->
-<!-- Modal -->
 <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
