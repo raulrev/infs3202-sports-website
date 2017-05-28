@@ -15,10 +15,10 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/sports.css">
+    <link rel="stylesheet" type="text/css" href="css/caru.css">
     <!-- js methods -->
     <script type='text/javascript' src="js/jqueryLibrary.js"></script>
     <script type="text/javascript" src="js/searchbar.js"></script>
-	<script type="text/javascript" src="js/smoothscroll.js"></script>
 </head>
 
 <body>
@@ -27,52 +27,85 @@ session_start();
 
     <div id="testcontent" class="container-fluid text-center">
         <div class="row content">
-            <div class="col-sm-2 sidenav">
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
-            </div>
+            <!-- Sidenav -->
+            <?php include 'sideNavigationMenu.php'; ?>
             <!-- center container col -->
             <div id= "TopNews" class="col-sm-8 text-left">
                 <!-- news feed container -->
-                <div class="row" id="top-group-container" style=" margin:1%; border: solid #f1f1f1;">
-                    <h4>News Feed</h4>
-                    <hr id="news-hr">
-                    <div class="container-fluid col-md-12" id="inner-news-cont">
+                <div class="row" id="top-group-container" style="margin-left:5px; margin-right:5px;">                    
+                    <div class="container-fluid col-md-12" style="border:solid #f1f1f1; margin-top: 10px; margin-bottom:10px;">
+                    <br>
+                    <h4> Top News </h4>
+                    <hr>
+                    <div class="carousel slide" id="myCarousel" style="margin-left:-40px;" >
+                        <div class="carousel-inner">
                             <?php echo bccTopNews() ?>
+                        </div>
+                        
+                        </div>
+                        <nav>
+                            <ul class="control-box pager">
+                                <li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
+                                <li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div> 
                     </div>
+                </div> 
 
-                </div>
-                <!-- Football container -->
-                 <div class="row" id="top-group-container" style=" margin:1%; border: solid #f1f1f1;">
-                    <h4>Footbal Italy</h4>
-                    <hr id="news-hr">
-                    <div class="container-fluid col-md-12" id="inner-news-cont">
-                            <?php echo footballSources() ?>
-                    </div>
-
-                </div>
-                <!-- NFL container -->
-                <div class="row" id="top-group-container" style=" margin:1%; border: solid #f1f1f1;">
-                    <h4>NFL</h4>
-                    <hr id="news-hr">
-                    <div class="container-fluid col-md-12" id="inner-news-cont">
-                            <?php echo nflSources() ?>
-                    </div>
-
-                </div>
                 
+                <!-- Football container -->
+                 <div class="row" id="top-group-container" style="margin-left:5px; margin-right:5px;">                    
+                    <div class="container-fluid col-md-12" style="border:solid #f1f1f1; margin-top: 10px; margin-bottom:10px;">
+                    <br>
+                    <h4> Football News </h4>
+                    <hr>
+                    <div class="carousel slide" id="myCarousel" style="margin-left:-40px;" >
+                        <div class="carousel-inner">
+                            <?php echo footballCaru() ?>
+                        </div>
+                        
+                        </div>
+                        <nav>
+                            <ul class="control-box pager">
+                                <li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
+                                <li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div> 
+                    </div>
+                </div> 
+                 <!-- fot container close -->
+                 <div class="row" id="top-group-container" style="margin-left:5px; margin-right:5px;">                    
+                    <div class="container-fluid col-md-12" style="border:solid #f1f1f1; margin-top: 10px; margin-bottom:10px;">
+                    <br>
+                    <h4> NFL News </h4>
+                    <hr>
+                    <div class="carousel slide" id="myCarousel" style="margin-left:-40px;" >
+                        <div class="carousel-inner">
+                            <?php echo nflSources() ?>
+                        </div>
+                        
+                        </div>
+                        <nav>
+                            <ul class="control-box pager">
+                                <li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
+                                <li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div> 
+                    </div>
+                </div> 
+                <!-- NFL container -->
+                                
             </div>
 
 
-            <div class="col-sm-2 sidenav">
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
+            <div class="col-sm-2 col-md-2 sidenav well">
+                <h5> NBA Scheduled Games </h5>               
+                    <?php echo nbaGameSchedule() ?>
             </div>
+        </div>
         </div>
     </div>
     <?php include 'signUp.php';?>

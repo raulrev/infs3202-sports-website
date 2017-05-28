@@ -25,20 +25,23 @@ session_start();
     <?php include 'sports_data.php';?>
     <div id="testcontent" class="container-fluid text-center">
         <div class="row content">
-             <!-- Sidenav -->
-            <?php include 'sideNavigationMenu.php'; ?>
-            <div id= "SportsSelection" class="col-sm-8 text-left">
-                <div class="container-fluid col-md-12">
-                    <br>
-                    <h4> Most Recent </h4>
-                    <hr>
-                    <?php echo bccCompleteNews() ?>
+            <div class="col-sm-2 col-md-2 col-lg-2 sidenav">
+                <p><a href="#">Link</a></p>
+                <p><a href="#">Link</a></p>
+                <p><a href="#">Link</a></p>
+            </div>
 
+            <div id= "SportsSelection" class="col-sm-8 col-md-8 col-lg-8 text-left">
+                <div class="container-fluid col-md-12">
+                    <h4> Most Recent NFL News </h4>
+                    <hr>
+                    
                 </div>           
             </div>
-            <div class="col-sm-2 col-md-2 sidenav well">
-                <h4> NBA Scheduled Games </h4>               
-                    <?php echo nbaGameSchedule() ?>
+
+            <div class="col-sm-2 col-md-2 col-lg-2 sidenav">
+            <h5> NBA Scheduled Games </h5>               
+                    <?php echo nbaNews() ?>
             </div>
 
         </div>

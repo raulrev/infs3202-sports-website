@@ -1,0 +1,37 @@
+
+/* Carousel Control */
+.control-box {
+    text-align: center;
+    width: 100%;
+}
+.carousel-control{
+    background: #666;
+    border: 0px;
+    border-radius: 0px;
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 200;
+    line-height: 18px;
+    opacity: 0.5;
+    position: static;
+    height: 30px;
+    width: 15px;
+}
+   .thumbnails {-webkit-transition: all 150ms ease;
+	-moz-transition: all 150ms ease;
+	-ms-transition: all 150ms ease;
+	-o-transition: all 150ms ease;
+	transition: all 150ms ease; }
+
+
+/* Mobile Only */
+@media (max-width: 767px) {
+    .page-header, .control-box {
+        text-align: center;
+    } 
+}
+@media (max-width: 479px) {
+    .caption {
+        word-break: break-all;
+    }
+}

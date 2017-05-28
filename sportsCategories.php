@@ -18,7 +18,7 @@ session_start();
     <!-- js methods -->
     <script type='text/javascript' src="js/jqueryLibrary.js"></script>
     <script type="text/javascript" src="js/searchbar.js"></script>
-	<script type="text/javascript" src="js/smoothscroll.js"></script>
+  
 </head>
 
 <body>
@@ -26,15 +26,13 @@ session_start();
     <?php include 'sports_data.php';?>
     <div id="testcontent" class="container-fluid text-center">
         <div class="row content">
-            <div class="col-sm-2 sidenav">
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
-            </div>
-
+            <!-- Sidenav -->
+          <?php include 'sideNavigationMenu.php'; ?>
+            <!--Page Content -->
             <div id= "SportsSelection" class="col-sm-8 text-left">
-                <div class="container col-md-12" id="categories-buttons-container">
+                <div class="container col-md-12" id="categories-buttons-container" style="margin-left: 50px;">
                     <div class="row">
+                        <br>
                         <h4> Sports </h4>
                         <p>
                             <a href="TopNewsFeed.php" class="btn btn-sq-lg btn-default">
@@ -127,16 +125,13 @@ session_start();
 
             </div>
 
-            <div class="col-sm-2 sidenav">
-                <div class="well">
-                    <p>ADS</p>
-                </div>
-                <div class="well">
-                    <p>ADS</p>
-                </div>
+            <div class="col-sm-2 col-md-2 sidenav well">
+                <h4> NBA Scheduled Games </h4>               
+                <?php echo nbaGameSchedule() ?>
             </div>
 
         </div>
+        
     </div>
 
     <?php include 'signUp.php';?>
@@ -147,6 +142,7 @@ session_start();
         src="https://newsapi.org/v1/articles?source=the-next-web&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f">
     </script>
     <?php include 'include/footer.php';?>
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -155,5 +151,6 @@ session_start();
   
 
 </body>
+
 
 </html>
