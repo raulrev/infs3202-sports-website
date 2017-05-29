@@ -77,7 +77,7 @@ session_start();
 				echo "<div id='results'>You got $totalCorrect /10 Correct. Would you like to Submit your score to our weekly Scoreboard?</div>";
 				?>
 			</div>
-			<div class="col-sm-2 sidenav">
+			<div class="col-sm-2 sidenav" style="margin-top: 25px;">
                 <div class="well">
                     <p>ADS</p>
                 </div>
@@ -88,9 +88,17 @@ session_start();
 
         </div>
     </div>
+ <script async defer
+        src="https://newsapi.org/v1/articles?source=the-next-web&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f">
+    </script>
+    <?php include 'include/footer.php';?>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Change background colours-->
+  
+
 </body>
 
-    <?php include 'signUp.php';?>
-    <?php include 'error.php';?> 
-    <?php include 'logout.php';?>
-
+</html>

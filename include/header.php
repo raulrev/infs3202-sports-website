@@ -36,12 +36,13 @@
             <!-- Search bar setup -->
             <div class="col-md-4 col-xs-12">
                 <ul class="nav navbar-nav navbar-right">
+				<form action="/search_results.php" method="get" style = "margin-bottom: -11.5px;">
                     <li><a href="#" id="searchInput"><span class="fa fa-search fa-1x"></span> Search</a></li>
 
                     <li>
                         <div id="searchbox">
                             <div class="input-group stylish-input-group">
-                                <input type="text" class="form-control" placeholder="Search">
+                                <input type="text" name = "Search" id = "search class="form-control" placeholder="Search"/>
                                 <span class="input-group-addon">
                 <button id="close-search" type="submit">
                     <span class="fa fa-times"></span>
@@ -49,6 +50,7 @@
                                 </span>
                             </div>
                         </div>
+						</form>
                     </li>
                     <!-- Login details -->
                     <li class="dropdown">

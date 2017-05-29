@@ -195,14 +195,7 @@
                 }           
         }
     }
-
-
-
-
-
-
-
-    // Display all Football news from server.
+	    // Display all Football news from server.
     function completeFootballSources(){
         $footSources = file_get_contents("https://newsapi.org/v1/articles?source=football-italia&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f");
         $footSourcesArray= json_decode($footSources, true);
@@ -349,5 +342,200 @@
            }
       }
 
-    
+    function searchFootBallSources(){
+		$footSources = file_get_contents("https://newsapi.org/v1/articles?source=football-italia&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f");
+        $footSourcesArray= json_decode($footSources, true);
+        $sources = $footSourcesArray['articles'];
+		
+		for ($i = 0; $i < count($sources); $i++){
+			$sites = $footSourcesArray['articles'][$i];
+			if (in_array ($_GET['Search'], $sites)){
+				$searchResults = array_search($_GET['Search'], $sites);
+				if($searchResults=='title'){
+					echo
+					'
+                    <div class="col-sm-6 col-md-6">
+                        <div class="thumbnail" id="news-container">
+                            <a href="'.$sites['url'].'" target="_blank">
+                            <h5>"'.$sites['title'].'"</h5>
+                            </a>
+                            <img src="'.$sites['urlToImage'].'">
+                            <div class="caption">
+                                <p style="font-size: 11px;">"'.$sites['description'].'"</p>
+                            </div>
+                        </div>
+                    </div>
+                ';
+                if ($i == 11){
+                    break;
+                    
+                }          
+			}
+		}
+	}
+	}
+	
+		function searchNFLSources(){
+		$nflSources = file_get_contents("https://newsapi.org/v1/articles?source=nfl-news&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f");
+        $nflSourcesArray= json_decode($nflSources, true);
+        $sources = $nflSourcesArray['articles'];
+		
+		for ($i = 0; $i < count($sources); $i++){
+			$sites = $nflSourcesArray['articles'][$i];
+			if (in_array ($_GET['Search'], $sites)){
+				$searchResults = array_search($_GET['Search'], $sites);
+				if($searchResults=='title'){
+					echo
+					'
+                    <div class="col-sm-6 col-md-6">
+                        <div class="thumbnail" id="news-container">
+                            <a href="'.$sites['url'].'" target="_blank">
+                            <h5>"'.$sites['title'].'"</h5>
+                            </a>
+                            <img src="'.$sites['urlToImage'].'">
+                            <div class="caption">
+                                <p style="font-size: 11px;">"'.$sites['description'].'"</p>
+                            </div>
+                        </div>
+                    </div>
+                ';
+                if ($i == 11){
+                    break;
+                    
+                }          
+			}
+		}
+	}
+	}
+	
+		function searchBCCSources(){
+			$urlBCCSources = file_get_contents("https://newsapi.org/v1/articles?source=bbc-sport&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f");
+			$urlBCCSourcesArray = json_decode($urlBCCSources, true);
+			$sources = $urlBCCSourcesArray['articles'];  
+
+				for ($i = 0; $i < count($sources); $i++){
+				$sites = $urlBCCSourcesArray['articles'][$i];
+				if (in_array ($_GET['Search'], $sites)){
+					$searchResults = array_search($_GET['Search'], $sites);
+					if($searchResults=='title'){
+						echo
+						'
+						<div class="col-sm-6 col-md-6">
+							<div class="thumbnail" id="news-container">
+								<a href="'.$sites['url'].'" target="_blank">
+								<h5>"'.$sites['title'].'"</h5>
+								</a>
+								<img src="'.$sites['urlToImage'].'">
+								<div class="caption">
+									<p style="font-size: 11px;">"'.$sites['description'].'"</p>
+								</div>
+							</div>
+						</div>
+					';
+					if ($i == 11){
+						break;
+						
+					}          
+				}
+			}
+		}
+		}
+		
+		function searchESPNSources(){
+			$urlEspnSources = file_get_contents("https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f");
+			$urlEspnSourcesArray = json_decode($urlEspnSources, true);
+			$espnSources = $urlEspnSourcesArray['articles'];  
+
+				for ($i = 0; $i < count($espnSources); $i++){
+				$sites = $urlEspnSourcesArray['articles'][$i];
+				if (in_array ($_GET['Search'], $sites)){
+					$searchResults = array_search($_GET['Search'], $sites);
+					if($searchResults=='title'){
+						echo
+						'
+						<div class="col-sm-6 col-md-6">
+							<div class="thumbnail" id="news-container">
+								<a href="'.$sites['url'].'" target="_blank">
+								<h5>"'.$sites['title'].'"</h5>
+								</a>
+								<img src="'.$sites['urlToImage'].'">
+								<div class="caption">
+									<p style="font-size: 11px;">"'.$sites['description'].'"</p>
+								</div>
+							</div>
+						</div>
+					';
+					if ($i == 11){
+						break;
+						
+					}          
+				}
+			}
+		}
+		}
+				function searchFOXSources(){
+			$urlFoxSources = file_get_contents("https://newsapi.org/v1/articles?source=fox-sports&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f");
+        $urlFoxSourcesArray = json_decode($urlFoxSources, true);
+        $foxSources = $urlFoxSourcesArray['articles'];  
+
+				for ($i = 0; $i < count($foxSources); $i++){
+				$sites = $urlFoxSourcesArray['articles'][$i];
+				if (in_array ($_GET['Search'], $sites)){
+					$searchResults = array_search($_GET['Search'], $sites);
+					if($searchResults=='title'){
+						echo
+						'
+						<div class="col-sm-6 col-md-6">
+							<div class="thumbnail" id="news-container">
+								<a href="'.$sites['url'].'" target="_blank">
+								<h5>"'.$sites['title'].'"</h5>
+								</a>
+								<img src="'.$sites['urlToImage'].'">
+								<div class="caption">
+									<p style="font-size: 11px;">"'.$sites['description'].'"</p>
+								</div>
+							</div>
+						</div>
+					';
+					if ($i == 11){
+						break;
+						
+					}          
+				}
+			}
+		}
+		}
+		function searchSBibleSources(){
+			$urlSbibleSources = file_get_contents("https://newsapi.org/v1/articles?source=the-sport-bible&sortBy=top&apiKey=c85d7a8b0bcb471e8666fbf2740b391f");
+        $urlSbibleSourcesArray = json_decode($urlSbibleSources, true);
+        $sbibleSources = $urlSbibleSourcesArray['articles']; 
+
+				for ($i = 0; $i < count($sbibleSources); $i++){
+				$sites = $urlSbibleSourcesArray['articles'][$i];
+				if (in_array ($_GET['Search'], $sites)){
+					$searchResults = array_search($_GET['Search'], $sites);
+					if($searchResults=='title'){
+						echo
+						'
+						<div class="col-sm-6 col-md-6">
+							<div class="thumbnail" id="news-container">
+								<a href="'.$sites['url'].'" target="_blank">
+								<h5>"'.$sites['title'].'"</h5>
+								</a>
+								<img src="'.$sites['urlToImage'].'">
+								<div class="caption">
+									<p style="font-size: 11px;">"'.$sites['description'].'"</p>
+								</div>
+							</div>
+						</div>
+					';
+					if ($i == 11){
+						break;
+						
+					}          
+				}
+			}
+		}
+		}
+		
 ?>
